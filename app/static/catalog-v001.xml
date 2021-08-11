@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="http://ethon.consensys.net/v0/" uri="erc721.owl"/>
+    <uri id="User Entered Import Resolution" name="http://ethon.consensys.net/Contracts/v0/" uri="erc721.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1625000632443" name="http://ethon.consensys.net/ERC20/" uri="erc721.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1625000632443" name="http://spitfire-project.eu/ontology/ns" uri="openiot.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1625000632443" name="https://ethon.herokuapp.com/ethextras.owl#" uri="ethextras.owl"/>
+    </group>
+</catalog>

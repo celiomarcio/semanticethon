@@ -1,0 +1,6 @@
+Flask==1.1.2
+rdflib==5.0.0
+rdflib-jsonld==0.5.0
+rdflib-web @ https://github.com/dotmpe/rdflib-web/archive/master.zip
+gunicorn==20.1.0
+web3==5.18.0

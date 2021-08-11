@@ -1,0 +1,455 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://ethon.herokuapp.com/ethextras.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://ethon.herokuapp.com/ethextras.owl#">
+    <Prefix name="" IRI="https://ethon.herokuapp.com/ethextras.owl#"/>
+    <Prefix name="dbr" IRI="http://dbpedia.org/resource/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="ethon" IRI="https://ethon.consensys.net/"/>
+    <Declaration>
+        <Class abbreviatedIRI="dbr:Blockchain"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dbr:Ethereum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://ethon.consensys.net/ethon:Account"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://ethon.consensys.net/ethon:Block"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://ethon.consensys.net/ethon:Uncle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Abi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Blockchain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Currency"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Platform"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PlatformNet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://ethon.herokuapp.com/ethonExten.owl#ethon:ContractAccount"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://ethon.herokuapp.com/ethonExten.owl#ethon:Tx"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://ethon.herokuapp.com/ethonExten.owl#ethon:TxReceipt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="balance"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasABI"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasCurrency"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasCurrencyName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasCurrencyPrefix"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasExternalReference"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasGenesisBlock"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasNet"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasOwner"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasPlatform"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="miner"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="mixHash"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="netName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="receiptsRoot"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="stateRoot"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="transactionsRoot"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#belongsToBlock"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#blockHash"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#contract"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#cumulativeGasUsed"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#from"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#gasUsed"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#inBlock"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#logsBloom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#transactionHash"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#transactionIndex"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#type"/>
+    </Declaration>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="balance"/>
+        <Class IRI="https://ethon.consensys.net/ethon:Account"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="balance"/>
+        <Class IRI="https://ethon.herokuapp.com/ethonExten.owl#ethon:ContractAccount"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasABI"/>
+        <Class IRI="https://ethon.herokuapp.com/ethonExten.owl#ethon:ContractAccount"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasCurrency"/>
+        <Class IRI="Platform"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasCurrencyName"/>
+        <Class IRI="Currency"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasCurrencyPrefix"/>
+        <Class IRI="Currency"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasExternalReference"/>
+        <Class IRI="Blockchain"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasExternalReference"/>
+        <Class IRI="Platform"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasGenesisBlock"/>
+        <Class IRI="PlatformNet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasName"/>
+        <Class IRI="Platform"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasName"/>
+        <Class IRI="PlatformNet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasNet"/>
+        <Class IRI="Platform"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasOwner"/>
+        <Class IRI="https://ethon.consensys.net/ethon:Account"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasPlatform"/>
+        <Class IRI="Blockchain"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="miner"/>
+        <Class IRI="https://ethon.consensys.net/ethon:Block"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="miner"/>
+        <Class IRI="https://ethon.consensys.net/ethon:Uncle"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="mixHash"/>
+        <Class IRI="https://ethon.consensys.net/ethon:Block"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="netName"/>
+        <Class IRI="PlatformNet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="receiptsRoot"/>
+        <Class IRI="https://ethon.consensys.net/ethon:Block"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="stateRoot"/>
+        <Class IRI="https://ethon.consensys.net/ethon:Block"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="transactionsRoot"/>
+        <Class IRI="https://ethon.consensys.net/ethon:Block"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#belongsToBlock"/>
+        <Class IRI="https://ethon.herokuapp.com/ethonExten.owl#ethon:Tx"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#blockHash"/>
+        <Class IRI="https://ethon.herokuapp.com/ethonExten.owl#ethon:TxReceipt"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#contract"/>
+        <Class IRI="https://ethon.herokuapp.com/ethonExten.owl#ethon:TxReceipt"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#cumulativeGasUsed"/>
+        <Class IRI="https://ethon.herokuapp.com/ethonExten.owl#ethon:TxReceipt"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#from"/>
+        <Class IRI="https://ethon.herokuapp.com/ethonExten.owl#ethon:TxReceipt"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#gasUsed"/>
+        <Class IRI="https://ethon.herokuapp.com/ethonExten.owl#ethon:TxReceipt"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#inBlock"/>
+        <Class IRI="https://ethon.herokuapp.com/ethonExten.owl#ethon:Tx"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#inBlock"/>
+        <Class IRI="https://ethon.herokuapp.com/ethonExten.owl#ethon:TxReceipt"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#logsBloom"/>
+        <Class IRI="https://ethon.herokuapp.com/ethonExten.owl#ethon:TxReceipt"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#to"/>
+        <Class IRI="https://ethon.herokuapp.com/ethonExten.owl#ethon:TxReceipt"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#transactionHash"/>
+        <Class IRI="https://ethon.herokuapp.com/ethonExten.owl#ethon:TxReceipt"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#transactionIndex"/>
+        <Class IRI="https://ethon.herokuapp.com/ethonExten.owl#ethon:TxReceipt"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#type"/>
+        <Class IRI="https://ethon.herokuapp.com/ethonExten.owl#ethon:TxReceipt"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="balance"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasABI"/>
+        <Class IRI="Abi"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasCurrency"/>
+        <Class IRI="Currency"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasCurrencyName"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasCurrencyPrefix"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasExternalReference"/>
+        <Class abbreviatedIRI="dbr:Blockchain"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasExternalReference"/>
+        <Class abbreviatedIRI="dbr:Ethereum"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasGenesisBlock"/>
+        <Class IRI="https://ethon.consensys.net/ethon:Block"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasName"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasNet"/>
+        <Class IRI="PlatformNet"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasOwner"/>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasPlatform"/>
+        <Class IRI="Platform"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="miner"/>
+        <Class IRI="https://ethon.consensys.net/ethon:Account"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="mixHash"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="netName"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="receiptsRoot"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="stateRoot"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="transactionsRoot"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#belongsToBlock"/>
+        <Class IRI="https://ethon.consensys.net/ethon:Block"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#blockHash"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#contract"/>
+        <Class IRI="https://ethon.herokuapp.com/ethonExten.owl#ethon:ContractAccount"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#cumulativeGasUsed"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#from"/>
+        <Class IRI="https://ethon.consensys.net/ethon:Account"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#gasUsed"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#inBlock"/>
+        <Class IRI="https://ethon.consensys.net/ethon:Block"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#logsBloom"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#to"/>
+        <Class IRI="https://ethon.consensys.net/ethon:Account"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#transactionHash"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#transactionIndex"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://ethon.herokuapp.com/ethonExten.owl#type"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:hexBinary"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

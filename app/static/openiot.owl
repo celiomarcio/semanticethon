@@ -1,0 +1,2049 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://spitfire-project.eu/ontology/ns"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://spitfire-project.eu/ontology/ns">
+    <Prefix name="" IRI="http://openiot.eu/ontology/ns/"/>
+    <Prefix name="co" IRI="http://vocab.deri.ie/co#"/>
+    <Prefix name="gr" IRI="http://purl.org/goodrelations/v1#"/>
+    <Prefix name="cpo" IRI="http://vocab.deri.ie/cpo#"/>
+    <Prefix name="dul" IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="spt" IRI="http://spitfire-project.eu/ontology/ns/"/>
+    <Prefix name="ssn" IRI="http://purl.oclc.org/NET/ssnx/ssn#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="capo" IRI="http://vocab.deri.ie/capo#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="serv" IRI="http://usoa.deri.ie/ontology/service_v.0.1#"/>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>http://myr.altervista.org/foaf.rdf#me</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/identifier"/>
+        <Literal>http://spitfire-project.eu/ontology/ns</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/rights"/>
+        <Literal>Copyright 2010 - 2013 OpenIoT.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal xml:lang="en">OpenIoT Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+        <IRI>http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231.html</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal> Please report any error to myriam.leggieri_at_deri.org</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>This ontology describes abstraction of sensors and their integration with cloud computing concepts.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>This ontology is developed by DERI ( http://www.deri.ie ) for the OpenIoT project ( http://openiot.eu ) . It is based on the alignment among the W3C Semantic Sensor Networks Incubator Group (SSN-XG) ontology, the SPITFIRE ontology and the LSM vocabulary. </Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <Literal>http://openiot.eu</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI=":AnonymousAccess"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":AttributeDisabled"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":AttributeEnabled"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":CloudAccess"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":CloudService"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Context"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":CredentialAccess"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ExpirationPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":LoginStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":NewLogin"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":OldLogin"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ProxyCloudService"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":SSOServiceEnabled"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":SSOServiceStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":SchedulerAuthentication"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ServiceAttribute"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ServiceAttributeStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ServiceDisabled"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ServiceEnabled"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ServiceStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":TicketGrantingExpired"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":TicketGrantingStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":TicketGrantingValid"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssn:Latency"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssn:MeasurementCapability"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssn:SystemLifetime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Energy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/NetworkQuality"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":access"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":accessFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":attribute"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":attributeFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":attributeStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":attributeStatusFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":context"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":contextOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":foi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":forService"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":forVirtualSensor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":grantedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":grants"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":isObservedValueOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":mobility"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":mobilityOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":permission"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":permissionFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":role"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":roleOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":serviceFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":ssoStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":ssoStatusFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":status"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":statusFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":subSensor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":ticketFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":unit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":addressId"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":authenticatedBy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":creationTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":evaluationOrder"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":expirationPolicy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":expression"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":lastTimeUsed"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":mobilityEnd"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":mobilityStart"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":mobilityTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":password"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":prevLastTimeUsed"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":serviceBinary"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":servicesGranted"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":subSensorsCount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":theme"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":timesUsed"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":usernameAttr"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":value"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/identifier"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/rights"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/source"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ClientRole"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Client"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/uom"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":AtmospherePressure"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssn:Sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssn:ObservationValue"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssn:Observation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":contex"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Bandwidth"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Delay"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":MobilityContext"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Trustworthiness"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":DelayRange"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/NetworkProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":SessionTime"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":AirTemperature"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssn:Device"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ClientPermission"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="ssn:attachedSystem"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssn:observationResultTime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/LinkProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Ticket"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":VirtualSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":NetworkCapacity"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Survivability"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":CostEfficiency"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssn:OperatingProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":VirtualSensorLocation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":LinkCost"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":NetworkBandwidth"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Confidentiality"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":WindSpeed"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":NetworkThroughput"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":WebcamSnapShot"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="capo:Client"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="foaf:Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Status"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ssn:subPropertyOf"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="serv:Service"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dul:Process"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":StaticSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":SensorUtility"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":VirtualSensorTask"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssn:MeasurementProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dul:Location"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":EaseOfDeployment"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Temperature"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="co:ClientCredentials"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":DataVolume"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Scalability"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":AtmosphereHumidity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="ssn:featureOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="ssn:observationResult"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Reliability"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="cpo:ClientPermission"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":TicketScheduler"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":WindChill"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":AtmosphereVisibility"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":MobileSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ResourceOptimization"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":User"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gr:ProductOrService"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI=":AirTemperature"/>
+        <Class abbreviatedIRI=":Temperature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":AnonymousAccess"/>
+        <Class abbreviatedIRI=":CloudAccess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":AtmosphereHumidity"/>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":AtmospherePressure"/>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":AtmosphereVisibility"/>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":AttributeDisabled"/>
+        <Class abbreviatedIRI=":ServiceAttributeStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":AttributeEnabled"/>
+        <Class abbreviatedIRI=":ServiceAttributeStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Bandwidth"/>
+        <Class abbreviatedIRI="ssn:MeasurementProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Client"/>
+        <Class abbreviatedIRI="capo:Client"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Client"/>
+        <Class abbreviatedIRI="foaf:Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ClientPermission"/>
+        <Class abbreviatedIRI="cpo:ClientPermission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ClientRole"/>
+        <Class abbreviatedIRI="co:ClientCredentials"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":CloudService"/>
+        <Class abbreviatedIRI="gr:ProductOrService"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":CloudService"/>
+        <Class abbreviatedIRI="serv:Service"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Confidentiality"/>
+        <Class abbreviatedIRI="ssn:OperatingProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":CostEfficiency"/>
+        <Class abbreviatedIRI="ssn:OperatingProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":CredentialAccess"/>
+        <Class abbreviatedIRI=":CloudAccess"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":DataVolume"/>
+        <Class abbreviatedIRI="ssn:MeasurementProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Delay"/>
+        <Class abbreviatedIRI="ssn:MeasurementProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":DelayRange"/>
+        <Class abbreviatedIRI="ssn:MeasurementProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":EaseOfDeployment"/>
+        <Class abbreviatedIRI="ssn:OperatingProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ExpirationPolicy"/>
+        <Class abbreviatedIRI="gr:ProductOrService"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":LinkCost"/>
+        <Class IRI="/LinkProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":MobileSensor"/>
+        <Class abbreviatedIRI="ssn:Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":MobilityContext"/>
+        <Class abbreviatedIRI=":Context"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":NetworkBandwidth"/>
+        <Class IRI="/NetworkProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":NetworkCapacity"/>
+        <Class IRI="/NetworkProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":NetworkThroughput"/>
+        <Class IRI="/NetworkProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":NewLogin"/>
+        <Class abbreviatedIRI=":LoginStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":OldLogin"/>
+        <Class abbreviatedIRI=":LoginStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ProxyCloudService"/>
+        <Class abbreviatedIRI=":CloudService"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Reliability"/>
+        <Class abbreviatedIRI="ssn:OperatingProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ResourceOptimization"/>
+        <Class abbreviatedIRI="ssn:OperatingProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":SSOServiceEnabled"/>
+        <Class abbreviatedIRI=":SSOServiceStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Scalability"/>
+        <Class IRI="/NetworkProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":SensorUtility"/>
+        <Class abbreviatedIRI="ssn:OperatingProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ServiceDisabled"/>
+        <Class abbreviatedIRI=":ServiceStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ServiceEnabled"/>
+        <Class abbreviatedIRI=":ServiceStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":SessionTime"/>
+        <Class abbreviatedIRI="ssn:observationResultTime"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":StaticSensor"/>
+        <Class abbreviatedIRI="ssn:Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Status"/>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Survivability"/>
+        <Class abbreviatedIRI="ssn:OperatingProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Temperature"/>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Ticket"/>
+        <Class abbreviatedIRI="gr:ProductOrService"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Ticket"/>
+        <Class abbreviatedIRI="dul:Process"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":TicketGrantingExpired"/>
+        <Class abbreviatedIRI=":TicketGrantingStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":TicketGrantingValid"/>
+        <Class abbreviatedIRI=":TicketGrantingStatus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":TicketScheduler"/>
+        <Class abbreviatedIRI="gr:ProductOrService"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":TicketScheduler"/>
+        <Class abbreviatedIRI="dul:Process"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Trustworthiness"/>
+        <Class abbreviatedIRI="ssn:MeasurementProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":User"/>
+        <Class abbreviatedIRI=":Client"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":User"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":VirtualSensor"/>
+        <Class abbreviatedIRI="ssn:Sensor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":VirtualSensorLocation"/>
+        <Class abbreviatedIRI="dul:Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":VirtualSensorTask"/>
+        <Class abbreviatedIRI="dul:Process"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":WebcamSnapShot"/>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":WindChill"/>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":WindSpeed"/>
+        <Class abbreviatedIRI="ssn:Property"/>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI=":foi"/>
+        <ObjectProperty abbreviatedIRI="ssn:featureOfInterest"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI=":forVirtualSensor"/>
+        <ObjectProperty abbreviatedIRI="ssn:attachedSystem"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI=":mobility"/>
+        <ObjectProperty abbreviatedIRI=":context"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI=":mobilityOf"/>
+        <ObjectProperty abbreviatedIRI=":context"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI=":subSensor"/>
+        <ObjectProperty abbreviatedIRI="ssn:attachedSystem"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI=":unit"/>
+        <ObjectProperty IRI="/uom"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI=":access"/>
+        <ObjectProperty abbreviatedIRI=":accessFor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI=":attribute"/>
+        <ObjectProperty abbreviatedIRI=":attributeFor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI=":attributeStatus"/>
+        <ObjectProperty abbreviatedIRI=":attributeStatusFor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI=":contex"/>
+        <ObjectProperty abbreviatedIRI=":contextOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI=":context"/>
+        <ObjectProperty abbreviatedIRI=":contextOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI=":forService"/>
+        <ObjectProperty abbreviatedIRI=":serviceFor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI=":grantedBy"/>
+        <ObjectProperty abbreviatedIRI=":grants"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI=":isObservedValueOf"/>
+        <ObjectProperty abbreviatedIRI="ssn:observationResult"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI=":mobility"/>
+        <ObjectProperty abbreviatedIRI=":mobilityOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI=":permission"/>
+        <ObjectProperty abbreviatedIRI=":permissionFor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI=":role"/>
+        <ObjectProperty abbreviatedIRI=":roleOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI=":ssoStatus"/>
+        <ObjectProperty abbreviatedIRI=":ssoStatusFor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI=":status"/>
+        <ObjectProperty abbreviatedIRI=":statusFor"/>
+    </InverseObjectProperties>
+    <TransitiveObjectProperty>
+        <ObjectProperty abbreviatedIRI=":context"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty abbreviatedIRI=":contextOf"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":access"/>
+        <Class abbreviatedIRI=":CloudService"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":accessFor"/>
+        <Class abbreviatedIRI=":CloudAccess"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":attribute"/>
+        <Class abbreviatedIRI=":CloudService"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":attributeFor"/>
+        <Class abbreviatedIRI=":ServiceAttribute"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":attributeStatusFor"/>
+        <Class abbreviatedIRI=":ServiceAttributeStatus"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":context"/>
+        <Class abbreviatedIRI="ssn:Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":context"/>
+        <Class abbreviatedIRI="ssn:Observation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":contextOf"/>
+        <Class abbreviatedIRI=":Context"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":foi"/>
+        <Class abbreviatedIRI=":MobilityContext"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":forVirtualSensor"/>
+        <Class abbreviatedIRI="ssn:Sensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":grantedBy"/>
+        <Class abbreviatedIRI=":Ticket"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":grants"/>
+        <Class abbreviatedIRI=":TicketScheduler"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":isObservedValueOf"/>
+        <Class abbreviatedIRI="ssn:ObservationValue"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":mobility"/>
+        <Class abbreviatedIRI="ssn:Sensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":mobilityOf"/>
+        <Class abbreviatedIRI=":MobilityContext"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":permission"/>
+        <Class abbreviatedIRI=":ClientRole"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":permissionFor"/>
+        <Class abbreviatedIRI=":ClientPermission"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":role"/>
+        <Class abbreviatedIRI=":Client"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":roleOf"/>
+        <Class abbreviatedIRI=":ClientRole"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":serviceFor"/>
+        <Class abbreviatedIRI=":CloudService"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":ssoStatus"/>
+        <Class abbreviatedIRI=":CloudService"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":ssoStatusFor"/>
+        <Class abbreviatedIRI=":SSOServiceStatus"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":status"/>
+        <Class abbreviatedIRI=":CloudService"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":statusFor"/>
+        <Class abbreviatedIRI=":ServiceStatus"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":subSensor"/>
+        <Class abbreviatedIRI=":VirtualSensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":ticketFrom"/>
+        <Class abbreviatedIRI=":Ticket"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":ticketFrom"/>
+        <Class abbreviatedIRI=":TicketScheduler"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":access"/>
+        <Class abbreviatedIRI=":CloudAccess"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":accessFor"/>
+        <Class abbreviatedIRI=":CloudService"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":attribute"/>
+        <Class abbreviatedIRI=":ServiceAttribute"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":attributeFor"/>
+        <Class abbreviatedIRI=":CloudService"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":attributeStatus"/>
+        <Class abbreviatedIRI=":ServiceAttributeStatus"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":context"/>
+        <Class abbreviatedIRI=":Context"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":contextOf"/>
+        <Class abbreviatedIRI="ssn:Device"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":contextOf"/>
+        <Class abbreviatedIRI="ssn:Observation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":forService"/>
+        <Class abbreviatedIRI=":CloudService"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":forVirtualSensor"/>
+        <Class abbreviatedIRI=":VirtualSensor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":grantedBy"/>
+        <Class abbreviatedIRI=":TicketScheduler"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":grants"/>
+        <Class abbreviatedIRI=":Ticket"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":isObservedValueOf"/>
+        <Class abbreviatedIRI="ssn:Observation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":mobility"/>
+        <Class abbreviatedIRI=":MobilityContext"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":mobilityOf"/>
+        <Class abbreviatedIRI="ssn:Sensor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":permission"/>
+        <Class abbreviatedIRI=":ClientPermission"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":permissionFor"/>
+        <Class abbreviatedIRI=":ClientRole"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":role"/>
+        <Class abbreviatedIRI=":ClientRole"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":roleOf"/>
+        <Class abbreviatedIRI=":Client"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":ssoStatus"/>
+        <Class abbreviatedIRI=":SSOServiceStatus"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":ssoStatusFor"/>
+        <Class abbreviatedIRI=":CloudService"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":status"/>
+        <Class abbreviatedIRI=":ServiceStatus"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":statusFor"/>
+        <Class abbreviatedIRI=":CloudService"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":subSensor"/>
+        <Class abbreviatedIRI="ssn:Sensor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":ticketFrom"/>
+        <Class abbreviatedIRI=":LoginStatus"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":addressId"/>
+        <Class abbreviatedIRI=":CloudService"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":authenticatedBy"/>
+        <Class abbreviatedIRI=":TicketScheduler"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":creationTime"/>
+        <Class abbreviatedIRI=":Ticket"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":creationTime"/>
+        <Class abbreviatedIRI=":TicketScheduler"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":evaluationOrder"/>
+        <Class abbreviatedIRI=":CloudService"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":expirationPolicy"/>
+        <Class abbreviatedIRI=":Ticket"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":expirationPolicy"/>
+        <Class abbreviatedIRI=":TicketScheduler"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":expression"/>
+        <Class abbreviatedIRI=":CloudService"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":lastTimeUsed"/>
+        <Class abbreviatedIRI=":Ticket"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":lastTimeUsed"/>
+        <Class abbreviatedIRI=":TicketScheduler"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":password"/>
+        <Class abbreviatedIRI=":Client"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":prevLastTimeUsed"/>
+        <Class abbreviatedIRI=":Ticket"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":prevLastTimeUsed"/>
+        <Class abbreviatedIRI=":TicketScheduler"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":serviceBinary"/>
+        <Class abbreviatedIRI=":Ticket"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":servicesGranted"/>
+        <Class abbreviatedIRI=":TicketScheduler"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":subSensorsCount"/>
+        <Class abbreviatedIRI=":VirtualSensor"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":theme"/>
+        <Class abbreviatedIRI=":CloudService"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":timesUsed"/>
+        <Class abbreviatedIRI=":Ticket"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":timesUsed"/>
+        <Class abbreviatedIRI=":TicketScheduler"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":usernameAttr"/>
+        <Class abbreviatedIRI=":CloudService"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":addressId"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":authenticatedBy"/>
+        <Datatype abbreviatedIRI="xsd:hexBinary"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":creationTime"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":evaluationOrder"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":expirationPolicy"/>
+        <Datatype abbreviatedIRI="xsd:hexBinary"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":expression"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":lastTimeUsed"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":password"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":prevLastTimeUsed"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":serviceBinary"/>
+        <Datatype abbreviatedIRI="xsd:hexBinary"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":servicesGranted"/>
+        <Datatype abbreviatedIRI="xsd:hexBinary"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":subSensorsCount"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":theme"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":timesUsed"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":usernameAttr"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:AirTemperature</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:AnonymousAccess</AbbreviatedIRI>
+        <Literal xml:lang="en">Anonymous Access to a Cloud Computing service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:AnonymousAccess</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:AnonymousAccess</AbbreviatedIRI>
+        <Literal xml:lang="en">Anonymous Access</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:AtmosphereHumidity</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:AtmospherePressure</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:AtmosphereVisibility</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:AttributeDisabled</AbbreviatedIRI>
+        <Literal xml:lang="en">Cloud Service Status Disabled</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:AttributeDisabled</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:AttributeDisabled</AbbreviatedIRI>
+        <Literal xml:lang="en">Service Disabled</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:AttributeEnabled</AbbreviatedIRI>
+        <Literal xml:lang="en">Cloud Service Status Enabled</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:AttributeEnabled</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:AttributeEnabled</AbbreviatedIRI>
+        <Literal xml:lang="en">Service Enabled</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:Bandwidth</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:Client</AbbreviatedIRI>
+        <Literal xml:lang="en">Cloud Computing Client</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:Client</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Client</AbbreviatedIRI>
+        <Literal xml:lang="en">Cloud Computing Client</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:ClientPermission</AbbreviatedIRI>
+        <Literal xml:lang="en">Cloud Computing Client Permission</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:ClientPermission</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ClientPermission</AbbreviatedIRI>
+        <Literal xml:lang="en">Cloud Computing Client Permission</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:ClientRole</AbbreviatedIRI>
+        <Literal xml:lang="en">Cloud Computing Client Role</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:ClientRole</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ClientRole</AbbreviatedIRI>
+        <Literal xml:lang="en">Cloud Computing Client Role</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:CloudAccess</AbbreviatedIRI>
+        <Literal xml:lang="en">Access to a Cloud Computing service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:CloudAccess</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:CloudAccess</AbbreviatedIRI>
+        <Literal xml:lang="en">Cloud Access</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:CloudService</AbbreviatedIRI>
+        <Literal xml:lang="en">Cloud Computing service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:CloudService</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:CloudService</AbbreviatedIRI>
+        <Literal xml:lang="en">Cloud Computing service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:Confidentiality</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:Context</AbbreviatedIRI>
+        <Literal>Sensor Context</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:Context</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:CostEfficiency</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:CredentialAccess</AbbreviatedIRI>
+        <Literal xml:lang="en">Access to a Cloud Computing service requiring registered credentials</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:CredentialAccess</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:CredentialAccess</AbbreviatedIRI>
+        <Literal xml:lang="en">Credential Access</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:DataVolume</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:Delay</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:DelayRange</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:EaseOfDeployment</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:ExpirationPolicy</AbbreviatedIRI>
+        <Literal xml:lang="en">Expiration Policy for Service Tickets</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:ExpirationPolicy</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ExpirationPolicy</AbbreviatedIRI>
+        <Literal xml:lang="en">Expiration Policy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:LinkCost</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:LoginStatus</AbbreviatedIRI>
+        <Literal xml:lang="en">Status of a Client Login</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:LoginStatus</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:LoginStatus</AbbreviatedIRI>
+        <Literal xml:lang="en">Login Status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:MobileSensor</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:MobilityContext</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:NetworkBandwidth</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:NetworkCapacity</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:NetworkThroughput</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:NewLogin</AbbreviatedIRI>
+        <Literal xml:lang="en">New Login</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:NewLogin</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:NewLogin</AbbreviatedIRI>
+        <Literal xml:lang="en">New Login</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:OldLogin</AbbreviatedIRI>
+        <Literal xml:lang="en">Old Login</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:OldLogin</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:OldLogin</AbbreviatedIRI>
+        <Literal xml:lang="en">Old Login</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:ProxyCloudService</AbbreviatedIRI>
+        <Literal xml:lang="en">Cloud Computing service that is allowed to act as a Proxy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:ProxyCloudService</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ProxyCloudService</AbbreviatedIRI>
+        <Literal xml:lang="en">Proxy Cloud Computing service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:Reliability</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:ResourceOptimization</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:SSOServiceEnabled</AbbreviatedIRI>
+        <Literal xml:lang="en">SSO Cloud Service Status Enabled</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:SSOServiceEnabled</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:SSOServiceEnabled</AbbreviatedIRI>
+        <Literal xml:lang="en">SSO Service Enabled</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:SSOServiceStatus</AbbreviatedIRI>
+        <Literal xml:lang="en">SSO Status of a Cloud Computing service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:SSOServiceStatus</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:SSOServiceStatus</AbbreviatedIRI>
+        <Literal xml:lang="en">SSO Service Status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:Scalability</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:SchedulerAuthentication</AbbreviatedIRI>
+        <Literal xml:lang="en">Ticket Scheduler Authentication</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:SchedulerAuthentication</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:SchedulerAuthentication</AbbreviatedIRI>
+        <Literal xml:lang="en">Ticket Scheduler Authentication</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:SensorUtility</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:ServiceAttribute</AbbreviatedIRI>
+        <Literal xml:lang="en">Attribute of a Cloud Computing service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:ServiceAttribute</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ServiceAttribute</AbbreviatedIRI>
+        <Literal xml:lang="en">Service Attribute</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:ServiceAttributeStatus</AbbreviatedIRI>
+        <Literal xml:lang="en">Status of Cloud Computing service&apos;s attributes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:ServiceAttributeStatus</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ServiceAttributeStatus</AbbreviatedIRI>
+        <Literal xml:lang="en">Service Attribute Status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:ServiceDisabled</AbbreviatedIRI>
+        <Literal xml:lang="en">Cloud Service Status Disabled</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:ServiceDisabled</AbbreviatedIRI>
+        <Literal xml:lang="en">SSO Cloud Service Status Disabled</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:ServiceDisabled</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ServiceDisabled</AbbreviatedIRI>
+        <Literal xml:lang="en">SSO Service Disabled</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ServiceDisabled</AbbreviatedIRI>
+        <Literal xml:lang="en">Service Disabled</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:ServiceEnabled</AbbreviatedIRI>
+        <Literal xml:lang="en">Cloud Service Status Enabled</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:ServiceEnabled</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ServiceEnabled</AbbreviatedIRI>
+        <Literal xml:lang="en">Service Enabled</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:ServiceStatus</AbbreviatedIRI>
+        <Literal xml:lang="en">Status of a Cloud Computing service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:ServiceStatus</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ServiceStatus</AbbreviatedIRI>
+        <Literal xml:lang="en">Cloud Service Status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:SessionTime</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:StaticSensor</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:Status</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:Survivability</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:Temperature</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:Ticket</AbbreviatedIRI>
+        <Literal xml:lang="en">Service Ticket</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:Ticket</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Ticket</AbbreviatedIRI>
+        <Literal xml:lang="en">Service Ticket</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:TicketGrantingExpired</AbbreviatedIRI>
+        <Literal xml:lang="en">Ticket Granting Expired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:TicketGrantingExpired</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:TicketGrantingExpired</AbbreviatedIRI>
+        <Literal xml:lang="en">Ticket Granting Expired</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:TicketGrantingStatus</AbbreviatedIRI>
+        <Literal xml:lang="en">Status of a Ticket grant assigned by a Ticket Scheduler</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:TicketGrantingStatus</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:TicketGrantingStatus</AbbreviatedIRI>
+        <Literal xml:lang="en">Ticket Granting Status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:TicketGrantingValid</AbbreviatedIRI>
+        <Literal xml:lang="en">Ticket Granting Valid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:TicketGrantingValid</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:TicketGrantingValid</AbbreviatedIRI>
+        <Literal xml:lang="en">Ticket Granting Valid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:TicketScheduler</AbbreviatedIRI>
+        <Literal xml:lang="en">Service Ticket Scehduler</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:TicketScheduler</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:TicketScheduler</AbbreviatedIRI>
+        <Literal xml:lang="en">Service Ticket Scheduler</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:Trustworthiness</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:User</AbbreviatedIRI>
+        <Literal xml:lang="en">Cloud Computing User</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:User</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:User</AbbreviatedIRI>
+        <Literal xml:lang="en">Cloud Computing User</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:VirtualSensor</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:VirtualSensorLocation</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:VirtualSensorTask</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:WebcamSnapShot</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:WindChill</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:WindSpeed</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:access</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:accessFor</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:addressId</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:attribute</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:attributeFor</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:attributeStatus</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:attributeStatusFor</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:authenticatedBy</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:context</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:contextOf</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:creationTime</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:evaluationOrder</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:expirationPolicy</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:expression</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:foi</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:forService</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:forVirtualSensor</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:grantedBy</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:grants</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:isObservedValueOf</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:lastTimeUsed</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:mobility</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:mobilityEnd</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:mobilityOf</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:mobilityStart</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:mobilityTime</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:password</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:permission</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:permissionFor</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:prevLastTimeUsed</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:role</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:roleOf</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:serviceBinary</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:serviceFor</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:servicesGranted</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:ssoStatus</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:ssoStatusFor</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:status</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:statusFor</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:subSensor</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:subSensorsCount</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:theme</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:ticketFrom</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:timesUsed</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:unit</AbbreviatedIRI>
+        <Literal>Unit of Measurement in use on a specific device or sensor or sensing device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:unit</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:usernameAttr</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ssn:subPropertyOf"/>
+        <AbbreviatedIRI>:value</AbbreviatedIRI>
+        <IRI>/value</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:value</AbbreviatedIRI>
+        <IRI>http://openiot.eu/ontology/ns</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>ssn:Latency</AbbreviatedIRI>
+        <IRI>http://purl.oclc.org/NET/ssnx/ssn</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>ssn:MeasurementCapability</AbbreviatedIRI>
+        <IRI>http://purl.oclc.org/NET/ssnx/ssn</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>ssn:SystemLifetime</AbbreviatedIRI>
+        <IRI>http://purl.oclc.org/NET/ssnx/ssn</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/Energy</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>/NetworkQuality</IRI>
+        <IRI></IRI>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

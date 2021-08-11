@@ -1,0 +1,1373 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://ethon.consensys.net/ERC20/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://ethon.consensys.net/ERC20/"
+     versionIRI="http://ethon.consensys.net/ERC20/v0/">
+    <Prefix name="" IRI="http://ethon.consensys.net/ERC20/"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="ns" IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="ethon" IRI="http://ethon.consensys.net/"/>
+    <Prefix name="Contracts" IRI="http://ethon.consensys.net/Contracts/"/>
+    <Import>http://ethon.consensys.net/Contracts/v0/</Import>
+    <Import>http://ethon.consensys.net/v0/</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <Literal>Marian Oancea</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Johannes Pfeffer</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal>EthOn ERC-20 - An ERC-20 Extension to EthOn</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
+        <Literal>erc20</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>This ontology extends EthOn with concepts that can be used to describe ERC-20 compliant Tokens.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <AbbreviatedIRI>ethon:ERC20</AbbreviatedIRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>https://github.com/ConsenSys/EthOn</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>https://github.com/ethereum/EIPs/issues/20</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal>0.0.2</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <Literal>unstable</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="ethon:Account"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ethon:ContractAccount"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ethon:LogEntry"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Contracts:Event"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Contracts:FunctionCall"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Allowance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DelegateTokenTransfer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ERC20Token"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OwnerTokenTransfer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TokenBalance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TokenDelegate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TokenHolder"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TokenTransfer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="EthOnERC20ObjectProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="byDelegate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="changesAllowance"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="changesBalance"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="from"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasAllowanceFunctionCall"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasApprovalLogEntry"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasDelegate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasFunctionCall"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasOwner"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasTokenBalance"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasTransfer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasTransferFunctionCall"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="implementsToken"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="providesAllowance"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="to"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="EthOnERC20DataProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="allowance"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="balance"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="decimals"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="initialAllowance"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="initialAmount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="initialBalance"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="symbol"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="totalSupply"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="transferAllowance"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="transferBalance"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="value"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="DelegateTokenTransfer"/>
+        <Class IRI="TokenTransfer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ERC20Token"/>
+        <Class abbreviatedIRI="ethon:ContractAccount"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OwnerTokenTransfer"/>
+        <Class IRI="TokenTransfer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TokenDelegate"/>
+        <Class abbreviatedIRI="ethon:Account"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TokenHolder"/>
+        <Class abbreviatedIRI="ethon:Account"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TokenTransfer"/>
+        <Class abbreviatedIRI="ethon:LogEntry"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="DelegateTokenTransfer"/>
+        <Class IRI="OwnerTokenTransfer"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="EthOnERC20ObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="byDelegate"/>
+        <ObjectProperty IRI="EthOnERC20ObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="changesAllowance"/>
+        <ObjectProperty IRI="EthOnERC20ObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="changesBalance"/>
+        <ObjectProperty IRI="EthOnERC20ObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="from"/>
+        <ObjectProperty IRI="EthOnERC20ObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasAllowanceFunctionCall"/>
+        <ObjectProperty IRI="hasFunctionCall"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasApprovalLogEntry"/>
+        <ObjectProperty IRI="EthOnERC20ObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasDelegate"/>
+        <ObjectProperty IRI="EthOnERC20ObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasFunctionCall"/>
+        <ObjectProperty IRI="EthOnERC20ObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasOwner"/>
+        <ObjectProperty IRI="EthOnERC20ObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasTokenBalance"/>
+        <ObjectProperty IRI="EthOnERC20ObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasTransfer"/>
+        <ObjectProperty IRI="EthOnERC20ObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasTransferFunctionCall"/>
+        <ObjectProperty IRI="hasFunctionCall"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="implementsToken"/>
+        <ObjectProperty IRI="EthOnERC20ObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="providesAllowance"/>
+        <ObjectProperty IRI="EthOnERC20ObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="to"/>
+        <ObjectProperty IRI="EthOnERC20ObjectProperty"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="byDelegate"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="changesBalance"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="from"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="hasApprovalLogEntry"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="hasDelegate"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="hasOwner"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="hasTransferFunctionCall"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="to"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="changesBalance"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="hasTokenBalance"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="hasTransfer"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="implementsToken"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="providesAllowance"/>
+    </InverseFunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="byDelegate"/>
+        <Class IRI="DelegateTokenTransfer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="changesBalance"/>
+        <Class IRI="TokenTransfer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="from"/>
+        <Class IRI="TokenTransfer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasAllowanceFunctionCall"/>
+        <Class IRI="Allowance"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasApprovalLogEntry"/>
+        <Class IRI="Allowance"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasDelegate"/>
+        <Class IRI="Allowance"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasFunctionCall"/>
+        <ObjectUnionOf>
+            <Class IRI="Allowance"/>
+            <Class IRI="TokenTransfer"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasOwner"/>
+        <Class IRI="TokenBalance"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasTokenBalance"/>
+        <Class IRI="ERC20Token"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasTransfer"/>
+        <Class IRI="ERC20Token"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasTransferFunctionCall"/>
+        <Class IRI="TokenTransfer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="implementsToken"/>
+        <Class abbreviatedIRI="ethon:ContractAccount"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="providesAllowance"/>
+        <Class IRI="TokenBalance"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="to"/>
+        <Class IRI="TokenTransfer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="byDelegate"/>
+        <Class abbreviatedIRI="ethon:Account"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="byDelegate"/>
+        <Class IRI="TokenDelegate"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="changesBalance"/>
+        <Class IRI="TokenBalance"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="from"/>
+        <Class abbreviatedIRI="ethon:Account"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="from"/>
+        <Class IRI="TokenHolder"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasAllowanceFunctionCall"/>
+        <Class abbreviatedIRI="Contracts:FunctionCall"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasApprovalLogEntry"/>
+        <Class abbreviatedIRI="ethon:LogEntry"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasDelegate"/>
+        <Class abbreviatedIRI="ethon:Account"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasDelegate"/>
+        <Class IRI="TokenDelegate"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasFunctionCall"/>
+        <Class abbreviatedIRI="Contracts:FunctionCall"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasOwner"/>
+        <Class abbreviatedIRI="ethon:Account"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasOwner"/>
+        <Class IRI="TokenHolder"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasTokenBalance"/>
+        <Class IRI="TokenBalance"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasTransfer"/>
+        <Class IRI="TokenTransfer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasTransferFunctionCall"/>
+        <Class abbreviatedIRI="Contracts:FunctionCall"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="implementsToken"/>
+        <Class IRI="ERC20Token"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="providesAllowance"/>
+        <Class IRI="Allowance"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="to"/>
+        <Class abbreviatedIRI="ethon:Account"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="to"/>
+        <Class IRI="TokenHolder"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="EthOnERC20DataProperty"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="allowance"/>
+        <DataProperty IRI="EthOnERC20DataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="balance"/>
+        <DataProperty IRI="EthOnERC20DataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="decimals"/>
+        <DataProperty IRI="EthOnERC20DataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="initialAllowance"/>
+        <DataProperty IRI="EthOnERC20DataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="initialAmount"/>
+        <DataProperty IRI="EthOnERC20DataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="initialBalance"/>
+        <DataProperty IRI="EthOnERC20DataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="name"/>
+        <DataProperty IRI="EthOnERC20DataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="symbol"/>
+        <DataProperty IRI="EthOnERC20DataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="totalSupply"/>
+        <DataProperty IRI="EthOnERC20DataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="transferAllowance"/>
+        <DataProperty IRI="EthOnERC20DataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="transferBalance"/>
+        <DataProperty IRI="EthOnERC20DataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="value"/>
+        <DataProperty IRI="EthOnERC20DataProperty"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="initialAllowance"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="totalSupply"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="transferBalance"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="value"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="allowance"/>
+        <Class IRI="Allowance"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="balance"/>
+        <Class IRI="TokenBalance"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="decimals"/>
+        <Class IRI="ERC20Token"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="initialAllowance"/>
+        <Class IRI="Allowance"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="initialAmount"/>
+        <Class IRI="ERC20Token"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="name"/>
+        <Class IRI="ERC20Token"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="symbol"/>
+        <Class IRI="ERC20Token"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="totalSupply"/>
+        <Class IRI="ERC20Token"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="transferAllowance"/>
+        <Class IRI="Allowance"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="transferBalance"/>
+        <Class IRI="TokenBalance"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="value"/>
+        <Class IRI="TokenTransfer"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="allowance"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="balance"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="decimals"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="initialAllowance"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="initialAmount"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="symbol"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="totalSupply"/>
+        <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="transferAllowance"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="transferBalance"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="value"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>Allowance</IRI>
+        <Literal>Allowance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Allowance</IRI>
+        <Literal xml:lang="en">A Token Allowance provided by a Token Balance. The Delegate Account of the Allowance can spend a fixed amount of Tokens on behalf of the token owner.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Allowance</IRI>
+        <Literal xml:lang="en">Token Allowance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>Allowance</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>DelegateTokenTransfer</IRI>
+        <Literal>DelegateTokenTransfer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>DelegateTokenTransfer</IRI>
+        <Literal xml:lang="en">A Delgate Token Transfer is a Token Transfer executed by a Spender that has been given an Allowance to spend.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>DelegateTokenTransfer</IRI>
+        <Literal xml:lang="en">Delegate Token Transfer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>DelegateTokenTransfer</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>ERC20Token</IRI>
+        <Literal>ERC20Token</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ERC20Token</IRI>
+        <Literal xml:lang="en">A token is a fungible virtual good that can be traded. ERC-20 Tokens comply to the standard described in the Ethereum ERC-20 proposal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ERC20Token</IRI>
+        <Literal xml:lang="en">ERC-20 Token</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>ERC20Token</IRI>
+        <IRI>https://github.com/ethereum/EIPs/issues/20</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>ERC20Token</IRI>
+        <IRI>https://theethereum.wiki/w/index.php/ERC20_Token_Standard</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>ERC20Token</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>EthOnERC20DataProperty</IRI>
+        <Literal xml:lang="en">Groups all EthOn ERC-20 extension Data Properties.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>EthOnERC20DataProperty</IRI>
+        <Literal xml:lang="en">EthOn ERC-20 Data Property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>EthOnERC20DataProperty</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>EthOnERC20ObjectProperty</IRI>
+        <Literal xml:lang="en">Groups all EthOn ERC-20 extension Object Properties</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>EthOnERC20ObjectProperty</IRI>
+        <Literal xml:lang="en">EthOn ERC-20 Object Property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>EthOnERC20ObjectProperty</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>OwnerTokenTransfer</IRI>
+        <Literal>OwnerTokenTransfer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>OwnerTokenTransfer</IRI>
+        <Literal xml:lang="en">An Owner Token Transfer is a Token Transfer executed by the Account that owns the corresponding Token Balance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>OwnerTokenTransfer</IRI>
+        <Literal xml:lang="en">Owner Token Transfer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>OwnerTokenTransfer</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>TokenBalance</IRI>
+        <Literal>TokenBalance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>TokenBalance</IRI>
+        <Literal xml:lang="en">The Balance of a Token owned by an Account.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TokenBalance</IRI>
+        <Literal xml:lang="en">Token Balance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>TokenBalance</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>TokenDelegate</IRI>
+        <Literal>TokenDelgate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>TokenDelegate</IRI>
+        <Literal xml:lang="en">A token delegate is an account that has received an allowance for a token.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TokenDelegate</IRI>
+        <Literal xml:lang="en">Token Delegate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>TokenDelegate</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>TokenHolder</IRI>
+        <Literal>TokenHolder</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>TokenHolder</IRI>
+        <Literal xml:lang="en">A token holder is an account that is (or has ever been) owner of a token balance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TokenHolder</IRI>
+        <Literal xml:lang="en">token holder</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>TokenHolder</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>TokenTransfer</IRI>
+        <Literal>TokenTransfer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>TokenTransfer</IRI>
+        <Literal xml:lang="en">A token transfer is the record of an amount of tokens being transferred from one account to another account. If the token complies to ERC-20 the transfer is logged by a LogEntry.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TokenTransfer</IRI>
+        <Literal xml:lang="en">Token Transfer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>TokenTransfer</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>allowance</IRI>
+        <Literal>allowance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>allowance</IRI>
+        <Literal xml:lang="en">The remaining allowance as provided by the token contract. This value is updated with the most recent known value - but should always be considered potentially outdated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>allowance</IRI>
+        <Literal xml:lang="en">allowance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>allowance</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>balance</IRI>
+        <Literal>balance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>balance</IRI>
+        <Literal xml:lang="en">The remaining balance as provided by the token contract.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>balance</IRI>
+        <Literal xml:lang="en">balance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>balance</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>byDelegate</IRI>
+        <Literal>byDelegate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>byDelegate</IRI>
+        <Literal xml:lang="en">Relates a Delegate Token Transfer to the Account that initiated it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>byDelegate</IRI>
+        <Literal xml:lang="en">by Delegate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>byDelegate</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>changesAllowance</IRI>
+        <Literal>changesAllowance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>changesAllowance</IRI>
+        <Literal xml:lang="en">Relates a delegate token transfer to the allowance it changes. When a delegate spends a certain amount of a token, this amount is deducted from its balance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>changesAllowance</IRI>
+        <Literal xml:lang="en">changes allowance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>changesAllowance</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>changesBalance</IRI>
+        <Literal>changesBalance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>changesBalance</IRI>
+        <Literal xml:lang="en">Relates a token transfer to the token balance it changes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>changesBalance</IRI>
+        <Literal xml:lang="en">changes balance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>changesBalance</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>decimals</IRI>
+        <Literal>decimals</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>decimals</IRI>
+        <Literal xml:lang="en">The standard amount of decimal units that a Token uses. The most common number of decimal places is 18.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>decimals</IRI>
+        <Literal xml:lang="en">decimal units</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>decimals</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>from</IRI>
+        <Literal>fromAccount</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>from</IRI>
+        <Literal xml:lang="en">Relates a Token Transfer with the Account it originates from.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>from</IRI>
+        <Literal xml:lang="en">from</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>from</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>hasAllowanceFunctionCall</IRI>
+        <Literal>hasAllowanceFunctionCall</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasAllowanceFunctionCall</IRI>
+        <Literal xml:lang="en">Relates an allowance to the function call that set the allowance. Newer function calls overwrite the values set by older function calls.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasAllowanceFunctionCall</IRI>
+        <Literal xml:lang="en">has Allowance FunctionCall</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>hasAllowanceFunctionCall</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>hasApprovalLogEntry</IRI>
+        <Literal>hasApprovalLogEntry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasApprovalLogEntry</IRI>
+        <Literal xml:lang="en">Relates a Token Approval to the LogEntry of the Event that was emitted when it was created.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasApprovalLogEntry</IRI>
+        <Literal xml:lang="en">has Approval LogEntry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>hasApprovalLogEntry</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>hasDelegate</IRI>
+        <Literal>hasDelegate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasDelegate</IRI>
+        <Literal xml:lang="en">Relates a Token Allowance to the Account that has been delegate to spend it on behalf of the Tokens&apos; owner.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasDelegate</IRI>
+        <Literal xml:lang="en">has Delegate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>hasDelegate</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>hasFunctionCall</IRI>
+        <Literal>hasFunctionCall</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasFunctionCall</IRI>
+        <Literal xml:lang="en">Relates a transfer or an allowance to the function call that caused it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasFunctionCall</IRI>
+        <Literal xml:lang="en">has Allowance FunctionCall</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>hasFunctionCall</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>hasOwner</IRI>
+        <Literal>hasOwner</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasOwner</IRI>
+        <Literal xml:lang="en">Relates a token balance with the account that owns the balance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasOwner</IRI>
+        <Literal xml:lang="en">has owner</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>hasOwner</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>hasTokenBalance</IRI>
+        <Literal>hasTokenBalance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasTokenBalance</IRI>
+        <Literal xml:lang="en">Relates a token contract to one of its balances.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasTokenBalance</IRI>
+        <Literal xml:lang="en">has Token Balance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>hasTokenBalance</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>hasTransfer</IRI>
+        <Literal>hasTransfer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasTransfer</IRI>
+        <Literal xml:lang="en">Relates an ERC20 token contract to one of its transfers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasTransfer</IRI>
+        <Literal xml:lang="en">has Transfer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>hasTransfer</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>hasTransferFunctionCall</IRI>
+        <Literal>hasTransferFunctionCall</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasTransferFunctionCall</IRI>
+        <Literal xml:lang="en">Relates a token transfer to the function call that caused the token transfer.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasTransferFunctionCall</IRI>
+        <Literal xml:lang="en">has Transfer FunctionCall</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>hasTransferFunctionCall</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>implementsToken</IRI>
+        <Literal>implementsToken</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>implementsToken</IRI>
+        <Literal xml:lang="en">Relates a Contract Account to the Token it implements.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>implementsToken</IRI>
+        <Literal xml:lang="en">implements Token</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>implementsToken</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>initialAllowance</IRI>
+        <Literal>initialAllowance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>initialAllowance</IRI>
+        <Literal xml:lang="en">Number of tokens that may be spent by an allowance&apos;s delegate on behalf of the tokens&apos; owner.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>initialAllowance</IRI>
+        <Literal xml:lang="en">initial allowance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>initialAllowance</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>initialAmount</IRI>
+        <Literal>initialAmount</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>initialAmount</IRI>
+        <Literal xml:lang="en">The initial amount of Tokens that are created in the Token Contract.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>initialAmount</IRI>
+        <Literal xml:lang="en">initial amount</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>initialAmount</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>initialBalance</IRI>
+        <Literal>initialBalance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>initialBalance</IRI>
+        <Literal xml:lang="en">The amount of tokens this token balance has initially. The initial value is set in the token contract and cannot be derived from the token transfers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>initialBalance</IRI>
+        <Literal xml:lang="en">initial balance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>initialBalance</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>name</IRI>
+        <Literal>name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>name</IRI>
+        <Literal xml:lang="en">The name of the Token.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>name</IRI>
+        <Literal xml:lang="en">token name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>name</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>providesAllowance</IRI>
+        <Literal>providesAllowance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>providesAllowance</IRI>
+        <Literal xml:lang="en">Relates a Token Balance with an Allowance it provides.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>providesAllowance</IRI>
+        <Literal xml:lang="en">provides Allowance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>providesAllowance</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>symbol</IRI>
+        <Literal>symbol</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>symbol</IRI>
+        <Literal xml:lang="en">The symbol of a Token.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>symbol</IRI>
+        <Literal xml:lang="en">token symbol</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>symbol</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>to</IRI>
+        <Literal>toAccount</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>to</IRI>
+        <Literal xml:lang="en">Relates a Token Transfer with the Account it is sent to.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>to</IRI>
+        <Literal xml:lang="en">to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>to</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>totalSupply</IRI>
+        <Literal>totalSupply</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>totalSupply</IRI>
+        <Literal xml:lang="en">The total supply of base units of a Token.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>totalSupply</IRI>
+        <Literal xml:lang="en">total supply</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>totalSupply</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>transferAllowance</IRI>
+        <Literal>transferAllowance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>transferAllowance</IRI>
+        <Literal xml:lang="en">The remaining allowance calculated based on the token transfers seen on chain.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>transferAllowance</IRI>
+        <Literal xml:lang="en">transfer allowance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>transferAllowance</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>transferBalance</IRI>
+        <Literal>transferBalance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>transferBalance</IRI>
+        <Literal xml:lang="en">A value equal to the base units of a Token calculated from all observable ERC-20 Transfer events. This doesn&apos;t necessarily represent the actual Token balance because it cannot be known what initial balances may be defined, what mechanisms may exist to generate or burn tokens and what other mechanisms that affect the token balances may be implemented in the token contract.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>transferBalance</IRI>
+        <Literal xml:lang="en">transfer balance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>transferBalance</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ethon:suggestedStringRepresentation"/>
+        <IRI>value</IRI>
+        <Literal>value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>value</IRI>
+        <Literal xml:lang="en">Number of tokens transferred.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>value</IRI>
+        <Literal xml:lang="en">value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ns:term_status"/>
+        <IRI>value</IRI>
+        <Literal>unstable</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

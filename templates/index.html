@@ -1,0 +1,24 @@
+{# index.html #}
+<div>
+    For following URLs, additional parameters are:
+    <ul>
+        <li>combined (no value required)</li>
+        <li>format (only read when combined is set, possible values are n3, xml, json-ld)</li>
+    </ul>
+    <ul>
+        {% for endpoint in links %}
+            <li><a href="{{ url + endpoint }}">{{ endpoint }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+<div>
+    Here is the entrance.
+    <ul>
+        <li>An example to annotation; the last section of the URI is format (<a
+                href="/ropsten/blocks/4900105/uncles/0?format=n3">n3</a>) (<a
+                href="/ropsten/transactions/0a20713e8289f56e4c94a47e3308610b16d1cd59fd43a7a9271a1ccdf33e7c8f?format=n3">xml</a>) (<a
+                href="/ropsten/blocks/4900105?format=json-ld">json-ld</a>) (<a 
+                href="/ropsten/transactions/0a20713e8289f56e4c94a47e3308610b16d1cd59fd43a7a9271a1ccdf33e7c8f">turtle</a>)
+        </li>
+    </ul>
+</div>
